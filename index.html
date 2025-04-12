@@ -71,12 +71,13 @@
 //window.onload necessary to keep javascripts from running before the app gets a chance to load entirely//
     window.onload = function () {
       var context, context2;
-      var canvas = document.getElementById('myCanvas');
+//sets text for canvas 1//     
+     var canvas = document.getElementById('myCanvas');
       context = canvas.getContext("2d");
       context.font = '20pt Calibri'; //sets font for canvas 1
       context.fillStyle = "black"; //sets font color for canvas 1//
       context.fillText("Original image will go here", 10, 20); //on canvas 1//
-
+//sets text for canvas 2//
       var canvas2 = document.getElementById('myCanvas2');
       context2 = canvas2.getContext("2d");
       context2.font = '20pt Calibri'; //sents font for canvas 2
@@ -98,7 +99,7 @@
         if (file && file.type.match(imageType)) {
           var reader = new FileReader();
           reader.onload = function (e) {
-            messageDisplayArea.innerHTML = "You picked an image!";
+            messageDisplayArea.innerHTML = "Congrats for picking an image!";
             var img = new Image();
             img.onload = function () {
               drawImageIOSFix(context, img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
