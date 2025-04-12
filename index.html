@@ -75,13 +75,13 @@
       context = canvas.getContext("2d");
       context.font = '20pt Calibri';
       context.fillStyle = "black";
-      context.fillText("Original image will go here", 10, 20);
+      context.fillText("Original image will go here", 10, 20); //on canvas 1//
 
       var canvas2 = document.getElementById('myCanvas2');
       context2 = canvas2.getContext("2d");
       context2.font = '20pt Calibri';
       context2.fillStyle = "black";
-      context2.fillText("Transformed image will go here", 10, 20);
+      context2.fillText("Transformed image will go here", 10, 20);   //on canvas 2//
 
 /* fileInput.addEventListener looks for any change in the <input> tag indicating that the user has selected a file (picture). */
       var fileInput = document.getElementById('fileInput');
@@ -138,7 +138,7 @@
       </div>
       <div id="messageDisplayArea"></div>
 
-      <canvas id="myCanvas" width="600" height="500" style="border:1px solid #d3d3d3;"></canvas>
+      <canvas id="myCanvas" width="600" height="500" style="border:1px solid #d3d3d3;"></canvas>    /
       <canvas id="myCanvas2" width="600" height="500" style="border:1px solid #d3d3d3;"></canvas>
     </div>
 
