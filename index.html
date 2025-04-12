@@ -103,7 +103,7 @@
             var img = new Image();
             img.onload = function () {
               drawImageIOSFix(context, img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
-
+//this function draws the image onto the canvas and sets the dimensions of the image on IOS//
               var imageData = context.getImageData(0, 0, 600, 500);
               var pixels = imageData.data;
 
