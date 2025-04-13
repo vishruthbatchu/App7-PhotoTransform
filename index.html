@@ -89,17 +89,17 @@
       var messageDisplayArea = document.getElementById('messageDisplayArea');
 
       var docMod = document.lastModified;
-      alert("This file last modified " + docMod);
+      alert("This file last modified " + docMod);             //this and the code below logs it in the console//
       console.log("This file last modified  " + docMod);
 
       fileInput.addEventListener('change', function () {
-        var file = fileInput.files[0];
-        var imageType = /image.*/;
+        var file = fileInput.files[0];                       //Gets the first selected file//
+        var imageType = /image.*/;                           //Regex to match image file type//
 
         if (file && file.type.match(imageType)) {
           var reader = new FileReader();
           reader.onload = function (e) {
-            messageDisplayArea.innerHTML = "Congrats for picking an image!";
+            messageDisplayArea.innerHTML = "Congrats for picking an image!";           //displays after you selecting image//
             var img = new Image();
             img.onload = function () {
               drawImageIOSFix(context, img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
